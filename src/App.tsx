@@ -41,7 +41,7 @@ const App: React.FC = () => {
   }, [countdown]);
 
   const generateRandomValue = () => {
-    return `${Math.floor(Math.random() * (45 - 5 + 1) + 5)}X`;
+    return `${Math.floor(Math.random() * 10) + 1}X`;
   };
 
   const formatTime = (date: Date) => {
