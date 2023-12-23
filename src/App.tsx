@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BigPlayButton, ControlBar, Player } from "video-react";
 
 const App: React.FC = () => {
   const [countdown, setCountdown] = useState(0);
@@ -7,10 +8,8 @@ const App: React.FC = () => {
   const [validade, setValidade] = useState("");
 
   const handleGenerateSignal = () => {
-    // Disable the button while counting down
     setCountdown(30);
 
-    // Generate the values for the spans
     setNormal(generateRandomValue());
     setTurbo(generateRandomValue());
 
@@ -96,6 +95,20 @@ const App: React.FC = () => {
         </div>
       </section>
       <iframe src="https://tracker.lendasbet.com/link?btag=53229693_310513"></iframe>
+      <div className="containertutorial">
+        <h1>VEJA ABAIXO O TUTORIAL</h1>
+      </div>
+      <div className="videoContainer">
+        <Player
+          playsInline
+          poster="cover.jpg"
+          src="tutorial.mp4"
+          startTime={1}
+        >
+          <BigPlayButton position="center" />
+          <ControlBar disableDefaultControls={true} className="my-class" />
+        </Player>
+      </div>
     </main>
   );
 };
