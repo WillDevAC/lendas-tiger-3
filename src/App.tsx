@@ -99,7 +99,15 @@ const App: React.FC = () => {
         <h1>VEJA ABAIXO O TUTORIAL</h1>
       </div>
       <div className="videoContainer">
-
+        <Player
+          playsInline
+          poster="cover.jpg"
+          src="tutorial.mp4"
+          startTime={1}
+        >
+          <BigPlayButton position="center" />
+          <ControlBar disableDefaultControls={true} className="my-class" />
+        </Player>
       </div>
     </main>
   );
